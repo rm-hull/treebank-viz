@@ -1,9 +1,9 @@
 (ns treebank-viz.svg
-  (:use [clojure.pprint]
-        [lacij.layouts.layout]
-        [lacij.edit.graph]
-        [lacij.view.graphview]
-        [lacij.view.core]))
+  (:require
+    [lacij.layouts.layout :refer :all]
+    [lacij.edit.graph :refer :all]
+    [lacij.view.graphview :refer :all]
+    [lacij.view.core :refer :all]))
 
 (defn- join-keywords
   "Converts a list of keywords into a combined form,

@@ -1,11 +1,12 @@
 (ns treebank-viz.core
-  (:use [clojure.pprint]
-        [opennlp.nlp]
-        [opennlp.treebank]
-        [treebank-viz.tree-zipper]
-        [treebank-viz.penn-tags]))
-
 (def treebank-parser (make-treebank-parser "resources/en-parser-chunking.bin"))
+  (:require
+    [clojure.pprint :refer [pprint]]
+    [opennlp.nlp :refer :all]
+    [opennlp.treebank :refer :all]
+    [treebank-viz.tree-zipper :refer :all]
+    [treebank-viz.penn-tags :refer :all]))
+
 
 (defn- add-identifiers
   "Takes a zipper and adds a unique identifier and description to each map node"

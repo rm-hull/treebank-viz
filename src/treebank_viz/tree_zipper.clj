@@ -1,8 +1,10 @@
 ;; Attribution: http://www.ibm.com/developerworks/library/j-treevisit/
 
 (ns treebank-viz.tree-zipper
-  (:require [clojure.zip :as zip])
-  (:import [clojure.lang IPersistentVector IPersistentMap IPersistentList ISeq]))
+  (:require
+    [clojure.zip :as zip])
+  (:import
+    [clojure.lang IPersistentVector IPersistentMap IPersistentList ISeq]))
 
 (defmulti tree-branch? class)
 (defmethod tree-branch? :default [_] false)
