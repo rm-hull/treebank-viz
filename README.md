@@ -7,16 +7,13 @@ Start with:
 
     $ lein ring server
 
-SVG graph available at
-[http://localhost:3000/svg?q=Find the two week period in the next six months with the most European conferences?]
-(http://localhost:3000/svg?q=Find the two week period in the next six months with the most European conferences?)*
+SVG graph of 
+["Find the two week period in the next six months with the most European conferences?"](http://localhost:3000/svg?q=Find%20the%20two%20week%20period%20in%20the%20next%20six%20months%20with%20the%20most%20European%20conferences?)*
 yields:
 
 ![SVG](https://rawgithub.com/delver/treebank-viz/master/example.svg)
 
-for example, or similar text representation at
-[http://localhost:3000/text?q=Find the two week period in the next six months with the most European conferences?]
-(http://localhost:3000/text?q=Find the two week period in the next six months with the most European conferences?)
+for example, or similar [text representation](http://localhost:3000/text?q=Find%20the%20two%20week%20period%20in%20the%20next%20six%20months%20with%20the%20most%20European%20conferences?)
 produces a clojure-readable data structure as follows:
 
 ```clojure
@@ -107,7 +104,10 @@ produces a clojure-readable data structure as follows:
            :chunk ("conferences?")})})})})})}
 ```
 
-* - Question attribution: [@garybernhardt](https://twitter.com/garybernhardt/status/376145933827727360)
+There's also a [JSON representation](http://localhost:3000/json?q=Find%20the%20two%20week%20period%20in%20the%20next%20six%20months%20with%20the%20most%20European%20conferences?).
+
+
+<sup>*</sup> - Question attribution: [@garybernhardt](https://twitter.com/garybernhardt/status/376145933827727360)
 
 
 References
