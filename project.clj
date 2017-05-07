@@ -6,10 +6,10 @@
     :url "http://opensource.org/licenses/MIT"}
   :dependencies [
     [org.clojure/clojure "1.8.0"]
-    [lacij "0.9.1"]
-    [instaparse "1.4.2"]
-    [clojure-opennlp "0.3.3"]
-    [compojure "1.5.0"]
+    [lacij "0.10.0"]
+    [instaparse "1.4.5"]
+    [clojure-opennlp "0.4.0"]
+    [compojure "1.6.0"]
     [rm-hull/helpmate "0.1.3"]]
   :ring {
     :handler treebank-viz.handler/app}
