@@ -1,4 +1,4 @@
-(defproject delver/treebank-viz "0.0.1"
+(defproject delver/treebank-viz "0.1.0"
   :description ""
   :url "https://github.com/rm-hull/treebank-viz"
   :license {
