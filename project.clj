@@ -12,12 +12,10 @@
     [clojure-opennlp "0.4.0"]
     [compojure "1.6.0"]
     [ring-logger-timbre "0.7.5"]
-    [metrics-clojure-ring "2.8.0"]
+    [metrics-clojure-ring "2.9.0"]
     [rm-hull/helpmate "0.1.3"]]
   :ring {
     :handler treebank-viz.handler/app}
-  :plugins [
-    [lein-ring "0.9.7"]]
   :source-paths ["src"]
   :resouce-paths ["resouces"]
   :jar-exclusions [#"(?:^|/).git"]
@@ -31,5 +29,6 @@
       :dependencies [
         [org.clojure/test.check "0.9.0"]]
       :plugins [
-        [lein-cloverage "1.0.6"]]}})
+        [lein-ring "0.11.0"]
+        [lein-cloverage "1.0.9"]]}})
 
