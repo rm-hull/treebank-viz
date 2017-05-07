@@ -1,5 +1,7 @@
-Treebank Visualization
-======================
+# Treebank Visualization
+[![Dependencies Status](http://jarkeeper.com/rm-hull/treebank-viz/status.svg)](http://jarkeeper.com/rm-hull/treebank-viz)
+[![Docker Pulls](https://img.shields.io/docker/pulls/richardhull/treebank-viz.svg?maxAge=2592000)](https://hub.docker.com/r/richardhull/treebank-viz/)
+[![Maintenance](https://img.shields.io/maintenance/yes/2017.svg?maxAge=2592000)]()
 
 SVG graph generation of treebank language parsing.
 
@@ -7,7 +9,7 @@ Start with:
 
     $ lein ring server
 
-SVG graph of 
+SVG graph of
 ["Find the two week period in the next six months with the most European conferences?"](http://localhost:3000/svg?q=Find%20the%20two%20week%20period%20in%20the%20next%20six%20months%20with%20the%20most%20European%20conferences?)*
 yields:
 
