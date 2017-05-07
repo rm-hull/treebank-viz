@@ -2,14 +2,15 @@
   (:require
     [compojure.core :refer :all]
     [compojure.handler :as handler]
-    [helpmate.html :refer :all]
     [clojure.pprint :refer [pprint]]
+    [clojure.data.json :as json]
     [ring.middleware.params :refer [wrap-params]]
     [ring.logger.timbre :as logger.timbre]
     [metrics.ring.expose :refer [expose-metrics-as-json]]
     [metrics.ring.instrument :refer [instrument]]
     [ring.util.io :refer [piped-input-stream]]
-    [ring.util.response :refer [response content-type status]]
+    [ring.util.response :refer [response content-type charset status]]
+    [helpmate.html :refer :all]
     [treebank-viz.svg :refer :all]
     [treebank-viz.core :refer :all]))
 
@@ -33,7 +34,8 @@
         #(->svg nodes edges labels %)
         (piped-input-stream)
         (response)
-        (content-type "image/svg+xml")))
+        (content-type "image/svg+xml")
+        (charset "UTF-8")))
     no-sentence))
 
 (defn text [sentence]
@@ -43,13 +45,29 @@
         #(with-open [out (clojure.java.io/writer %)] (pprint result out))
         (piped-input-stream)
         (response)
-        (content-type "text/plain")))
+        (content-type "text/plain")
+        (charset "UTF-8")))
+    no-sentence))
+
+(defn json [sentence]
+  (if (seq sentence)
+    (let [result (analyze sentence)]
+      (->
+        result
+        (json/write-str)
+        (response)
+        (content-type "application/json")
+        (charset "UTF-8")))
     no-sentence))
 
 (defroutes app-routes
   (GET "/svg"  [:as req] (svg (get-in req [:params :q])))
   (GET "/text" [:as req] (text (get-in req [:params :q])))
-  (GET "/"     [:as req] (-> (response index-page) (content-type "text/html"))))
+  (GET "/json" [:as req] (json (get-in req [:params :q])))
+  (GET "/"     [:as req] (->
+                           (response index-page)
+                           (content-type "text/html")
+                           (charset "UTF-8"))))
 
 (def app
   (->

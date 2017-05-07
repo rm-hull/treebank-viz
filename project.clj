@@ -6,6 +6,7 @@
     :url "http://opensource.org/licenses/MIT"}
   :dependencies [
     [org.clojure/clojure "1.8.0"]
+    [org.clojure/data.json "0.2.6"]
     [lacij "0.10.0"]
     [instaparse "1.4.5"]
     [clojure-opennlp "0.4.0"]
