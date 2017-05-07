@@ -5,6 +5,9 @@
     [helpmate.html :refer :all]
     [clojure.pprint :refer [pprint]]
     [ring.middleware.params :refer [wrap-params]]
+    [ring.logger.timbre :as logger.timbre]
+    [metrics.ring.expose :refer [expose-metrics-as-json]]
+    [metrics.ring.instrument :refer [instrument]]
     [ring.util.io :refer [piped-input-stream]]
     [ring.util.response :refer [response content-type status]]
     [treebank-viz.svg :refer :all]
@@ -51,4 +54,7 @@
 (def app
   (->
     (handler/site app-routes)
+    (logger.timbre/wrap-with-logger)
+    (expose-metrics-as-json)
+    (instrument)
     (wrap-params)))

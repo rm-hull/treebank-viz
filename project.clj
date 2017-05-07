@@ -10,6 +10,8 @@
     [instaparse "1.4.5"]
     [clojure-opennlp "0.4.0"]
     [compojure "1.6.0"]
+    [ring-logger-timbre "0.7.5"]
+    [metrics-clojure-ring "2.8.0"]
     [rm-hull/helpmate "0.1.3"]]
   :ring {
     :handler treebank-viz.handler/app}
