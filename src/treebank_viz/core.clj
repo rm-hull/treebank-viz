@@ -7,7 +7,11 @@
     [treebank-viz.tree-zipper :refer :all]
     [treebank-viz.penn-tags :refer :all]))
 
-(def treebank-parser (make-treebank-parser (io/resource "en-parser-chunking.bin")))
+(def treebank-parser
+  (make-treebank-parser
+    (or
+      (io/resource "en-parser-chunking.bin")
+      (io/input-stream "https://github.com/rm-hull/treebank-viz/raw/master/resources/en-parser-chunking.bin"))))
 
 (defn- add-identifiers
   "Takes a zipper and adds a unique identifier and description to each map node"
