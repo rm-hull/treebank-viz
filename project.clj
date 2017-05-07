@@ -10,7 +10,7 @@
     [instaparse "1.4.2"]
     [clojure-opennlp "0.3.3"]
     [compojure "1.5.0"]
-    [hiccup "1.0.5"]]
+    [rm-hull/helpmate "0.1.3"]]
   :ring {
     :handler treebank-viz.handler/app}
   :plugins [

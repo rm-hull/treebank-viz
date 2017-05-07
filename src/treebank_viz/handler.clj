@@ -2,7 +2,7 @@
   (:require
     [compojure.core :refer :all]
     [compojure.handler :as handler]
-    [hiccup.core :refer :all]
+    [helpmate.html :refer :all]
     [clojure.pprint :refer [pprint]]
     [ring.middleware.params :refer [wrap-params]]
     [ring.util.io :refer [piped-input-stream]]
@@ -13,12 +13,12 @@
 (def no-sentence
   (-> (response "No sentence supplied") (status 400)))
 
-(def form
+(def index-page
   (html
-    [:div
-     [:form {:type "post" :action "/svg" }
-      [:input {:type "text" :placeholder "Enter a setence" :name "q" :size 50}]
-      [:input {:type "submit" :value "svg"}]]]))
+    (div
+      (form :type "post" :action "/svg")
+      (input :type "text" :placeholder "Enter a setence" :name "q" :size 50)
+      (input :type "submit" :value "svg"))))
 
 (defn svg [sentence]
   (if (seq sentence)
@@ -46,7 +46,7 @@
 (defroutes app-routes
   (GET "/svg"  [:as req] (svg (get-in req [:params :q])))
   (GET "/text" [:as req] (text (get-in req [:params :q])))
-  (GET "/"     [:as req] (response form)))
+  (GET "/"     [:as req] (-> (response index-page) (content-type "text/html"))))
 
 (def app
   (->
