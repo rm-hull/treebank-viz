@@ -1,7 +1,7 @@
 # Treebank Visualization
 [![Dependencies Status](http://jarkeeper.com/rm-hull/treebank-viz/status.svg)](http://jarkeeper.com/rm-hull/treebank-viz)
 [![Docker Pulls](https://img.shields.io/docker/pulls/richardhull/treebank-viz.svg?maxAge=2592000)](https://hub.docker.com/r/richardhull/treebank-viz/)
-[![Maintenance](https://img.shields.io/maintenance/yes/2017.svg?maxAge=2592000)]()
+[![Maintenance](https://img.shields.io/maintenance/yes/2018.svg?maxAge=2592000)]()
 
 SVG graph generation of treebank language parsing.
 
@@ -13,7 +13,7 @@ SVG graph of
 ["Find the two week period in the next six months with the most European conferences?"](https://treebank-viz-xbudysqgpr.now.sh/svg?q=Find+the+two+week+period+in+the+next+six+months+with+the+most+European+conferences%3F)*
 yields:
 
-![SVG](https://rawgithub.com/delver/treebank-viz/master/example.svg)
+![SVG](https://rawgithub.com/rm-hull/treebank-viz/master/example.svg)
 
 for example, or similar [text representation](https://treebank-viz-xbudysqgpr.now.sh/text?q=Find+the+two+week+period+in+the+next+six+months+with+the+most+European+conferences%3F)
 produces a clojure-readable data structure as follows:
