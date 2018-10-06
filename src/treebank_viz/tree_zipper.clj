@@ -50,12 +50,10 @@
          [first-visitor & rest-visitors] visitors]
     (let [context (merge {:node node, :state state, :stop false, :next false}
                          (first-visitor node state))
-          {new-node :node
-           new-state :state
-           :keys (stop next)} context]
+          {:keys [node state stop next]} context]
       (if (or next stop (nil? rest-visitors))
-        {:node new-node, :state new-state, :stop stop}
-        (recur new-node new-state rest-visitors)))))
+        {:node node :state state :stop stop}
+        (recur node state rest-visitors)))))
 
 (defn tree-visitor
   ([zipper visitors]

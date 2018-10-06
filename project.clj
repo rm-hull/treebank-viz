@@ -5,15 +5,15 @@
     :name "The MIT License (MIT)"
     :url "http://opensource.org/licenses/MIT"}
   :dependencies [
-    [org.clojure/clojure "1.8.0"]
+    [org.clojure/clojure "1.9.0"]
     [org.clojure/data.json "0.2.6"]
     [lacij "0.10.0"]
-    [instaparse "1.4.5"]
-    [clojure-opennlp "0.4.0"]
-    [compojure "1.6.0"]
-    [ring-logger-timbre "0.7.5"]
-    [metrics-clojure-ring "2.9.0"]
-    [rm-hull/helpmate "0.1.3"]]
+    [instaparse "1.4.9"]
+    [clojure-opennlp "0.5.0"]
+    [compojure "1.6.1"]
+    [ring-logger-timbre "0.7.6"]
+    [metrics-clojure-ring "2.10.0"]
+    [rm-hull/helpmate "0.1.4"]]
   :ring {
     :handler treebank-viz.handler/app}
   :source-paths ["src"]
@@ -29,6 +29,6 @@
       :dependencies [
         [org.clojure/test.check "0.9.0"]]
       :plugins [
-        [lein-ring "0.11.0"]
-        [lein-cloverage "1.0.9"]]}})
+        [lein-ring "0.12.4"]
+        [lein-cloverage "1.0.13"]]}})
 
