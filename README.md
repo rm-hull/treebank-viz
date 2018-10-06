@@ -1,5 +1,5 @@
 # Treebank Visualization
-[![Dependencies Status](http://jarkeeper.com/rm-hull/treebank-viz/status.svg)](http://jarkeeper.com/rm-hull/treebank-viz)
+[![Dependencies Status](http://versions.deps.co/rm-hull/treebank-viz/status.svg)](http://versions.deps.co/rm-hull/treebank-viz)
 [![Docker Pulls](https://img.shields.io/docker/pulls/richardhull/treebank-viz.svg?maxAge=2592000)](https://hub.docker.com/r/richardhull/treebank-viz/)
 [![Maintenance](https://img.shields.io/maintenance/yes/2018.svg?maxAge=2592000)]()
 
