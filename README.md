@@ -10,12 +10,12 @@ Start with:
     $ lein ring server
 
 SVG graph of
-["Find the two week period in the next six months with the most European conferences?"](https://treebank-viz-xbudysqgpr.now.sh/svg?q=Find+the+two+week+period+in+the+next+six+months+with+the+most+European+conferences%3F)*
+["Find the two week period in the next six months with the most European conferences?"](https://treebank-viz.now.sh/svg?q=Find+the+two+week+period+in+the+next+six+months+with+the+most+European+conferences%3F)*
 yields:
 
 ![SVG](https://rawgithub.com/rm-hull/treebank-viz/master/example.svg)
 
-for example, or similar [text representation](https://treebank-viz-xbudysqgpr.now.sh/text?q=Find+the+two+week+period+in+the+next+six+months+with+the+most+European+conferences%3F)
+for example, or similar [text representation](https://treebank-viz.now.sh/text?q=Find+the+two+week+period+in+the+next+six+months+with+the+most+European+conferences%3F)
 produces a clojure-readable data structure as follows:
 
 ```clojure
@@ -106,7 +106,7 @@ produces a clojure-readable data structure as follows:
            :chunk ("conferences?")})})})})})}
 ```
 
-There's also a [JSON representation](https://treebank-viz-xbudysqgpr.now.sh/json?q=Find+the+two+week+period+in+the+next+six+months+with+the+most+European+conferences%3F).
+There's also a [JSON representation](https://treebank-viz.now.sh/json?q=Find+the+two+week+period+in+the+next+six+months+with+the+most+European+conferences%3F).
 
 
 <sup>*</sup> - Question attribution: [@garybernhardt](https://twitter.com/garybernhardt/status/376145933827727360)
