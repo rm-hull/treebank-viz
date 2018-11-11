@@ -21,7 +21,7 @@
   (html
     (div
       (form :type "post" :action "/svg")
-      (input :type "text" :placeholder "Enter a setence" :name "q" :size 50)
+      (input :type "text" :placeholder "Enter a sentence" :name "q" :size 50)
       (input :type "submit" :value "svg"))))
 
 (defn svg [sentence]
